@@ -1,0 +1,19 @@
+{
+  "name": "habit-tracker-monorepo",
+  "version": "1.0.0",
+  "description": "Full-Stack Habit & Daily Goal Tracker (React + Express + SQLite)",
+  "private": true,
+  "scripts": {
+    "setup": "npm --prefix server run db:setup",
+    "test": "npm --prefix server test",
+    "server": "npm --prefix server start",
+    "server:dev": "npm --prefix server run dev",
+    "client": "npm --prefix client dev",
+    "dev": "concurrently -k -n \"SERVER,CLIENT\" -c \"cyan.bold,magenta.bold\" \"npm run server:dev\" \"npm run client\"",
+    "build": "npm --prefix client run build",
+    "start": "npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

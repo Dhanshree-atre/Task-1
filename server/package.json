@@ -1,0 +1,19 @@
+{
+  "name": "habit-tracker-server",
+  "version": "1.0.0",
+  "description": "Express backend with SQLite for Habit & Daily Goal Tracker",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "db:setup": "node db/setup.js",
+    "test": "node test/verify.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^13.2.0",
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.3"
+  }
+}
